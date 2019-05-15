@@ -1,0 +1,464 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img
+{
+    margin: 0;
+    padding: 0;
+}
+fieldset, img, input, button
+{ /*fieldset组合表单中的相关元素*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+ul, ol
+{
+    list-style: none; /*清除列表风格*/
+}
+input
+{
+    padding-top: 0;
+    padding-bottom: 0;
+    font-family: "SimSun", "宋体";
+}
+select, input
+{
+    vertical-align: middle;
+}
+select, input, textarea
+{
+    font-size: 12px;
+    margin: 0;
+}
+textarea
+{
+    resize: none;
+} /*防止多行文本框拖动*/
+img
+{
+    border: 0;
+    vertical-align: middle;
+} /*  去掉图片低测默认的3像素空白缝隙*/
+table
+{
+    border-collapse: collapse; /*合并外边线*/
+}
+body
+{   /*  谷歌浏览器不支持12号以下的字体*/
+    font: 12px/150% Arial, Verdana, "\5b8b\4f53"; /*宋体，Unicode，统一码*/
+      color: #666;
+      background: #fff
+  }
+.clearfix:before, .clearfix:after
+{
+    content: "";
+    display: table
+    }
+.clearfix:after
+{
+    clear: both;
+}
+.clearfix
+{
+    *zoom: 1; /*IE/7/6*/
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    color: #C81623;
+}
+h1, h2, h3, h4, h5, h6
+{
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+s, i, em
+{
+    font-style: normal;
+    text-decoration: none;
+}
+.col-red
+{
+    color: #C81623 !important;/*权限最高*/
+} /*公共类*/
+.w { /*版心 提取 */
+    width: 1210px;
+    margin: 0 auto;
+}
+.fl { float: left}
+.fr { float: right}
+.al { text-align: left}
+.ac { text-align: center}
+.ar { text-align: right}
+.hide { display: none}
+
+/*ite-navigate部分start*/
+.site-nav{
+    height:30px;
+    line-height: 30px;
+    background-color:#E3E4E5;
+}
+.site-nav-send,
+.site-nav-r .fore{
+    padding: 0 25px 0 10px;
+    position: relative;
+}
+.site-nav-send:hover{
+    background-color: white;
+}
+.site-nav-send i,
+.fore i{
+    position: absolute;
+    top: 12px;
+    right:8px;
+    width: 15px;
+    height: 7px;
+    overflow: hidden;
+}
+.site-nav-send s,
+.fore s{
+    position: absolute;
+    top: -14px;
+}
+.site-nav-r li{
+    float: left; /*float设置为left，li标签就横排显示了*/
+    padding: 0 10px;
+    /*margin: 0 10px;*/
+
+    list-style:none;/*li标签不显示小圆点*/
+
+}
+/*后代选择写法，中间空格，加上.site-nav-r是为了增加权重，避免权重太低而被上面的样式覆盖*/
+.site-nav-r .line{
+    width: 1px;
+    height: 12px;
+    background-color: #cccccc;
+    margin-top: 9px;
+    padding: 0;
+}
+/*site-navigate部分end*/
+
+/*topbanner部分start*/
+.topbanner{
+    background-color: #F2A30F;
+}
+.tb{
+    position: relative;
+}
+.close-banner{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    background: url("../images/colse-icon2.png") no-repeat 0 0px;
+}
+.close-banner:hover{
+    /*background-position: bottom;*/
+    background-color: white;
+}
+/*topbanner部分end*/
+
+/*search部分start*/
+  .search-logo{
+       float: left;
+       /*width: 319px;*/
+       /*height: 138px;*/
+      width: 190px;
+      height: 170px;
+      background-color: pink;
+   }
+  .search-logo a{
+      display: block;
+      width: 190px;
+      height: 170px;
+      text-indent: -999px;
+      background: url("../images/logo2.png");
+  }
+  .serach-input{
+      float: left;
+      height: 33px;
+      padding-top: 25px;
+
+
+  }
+.serach-input button{
+    width: 52px;
+    height: 36px;
+    color: #fff;
+    background-color:#B61D1D ;
+    cursor: pointer;
+}
+.serach-input input{
+      float: left;
+      height: 25px;
+      width: 502px;
+      padding-left:4px ;
+    margin-left: 127px;
+      color: #989898;
+      font: 400 14px "microsoft yahei";
+      border:5px solid #B61D1D ;
+
+  }
+.serach-input button{
+    color: #fff;
+    font: 400 16px/36px "微软雅黑"; /*font:font-style font-size/line-height font-family;*/
+    height: 35px;
+    width: 50px;
+    cursor: pointer; /*鼠标变成小手*/
+
+}
+  .search-car{
+      position: relative;
+      float: right;
+      width: 114px;
+      height: 34px;
+      line-height: 34px;/*行高与盒子高度相同，即居中*/
+      padding-left: 76px;/*padding被翻译成补白，*/
+      background-color: #f9f9f9;
+      margin: 29px 68px; /* 上下边距是41px，右左边距是68px*/
+  }
+  .icon1{
+      position: absolute;
+      top: 8px;
+      left: 47px;
+      width: 18px;
+      height: 16px;
+      background: url(../images/shopping-car2.png) no-repeat 0 0px;
+      /*路径是相对路径，
+      其次，width和height为图片在fireworks中的尺寸，
+      no repeat是设置为不平铺，
+      后面的 0 0 表示图片的坐标*/
+  }
+  .icon2{
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: #999;
+      font: 13px/34px "SimSun";
+  }
+  .icon3{
+      position: absolute;
+      top: -5px;
+      width: 16px;
+      height: 14px;
+      background-color: #f10215;
+      line-height: 14px;
+      text-align: center;
+      color: #fff;
+      border-radius: 7px;
+  }
+  .search-moreAlink{
+      position: relative;
+      float: left;
+      width: 528px;
+      height: 31px;
+      /*background-color:yellowgreen;*/
+      line-height: 31px;
+      margin-left: 127px;
+      
+  }
+.search-moreAlink a{
+    margin-right: 10px;
+}
+.footer-top-slogen{
+    position: relative;
+    width: 100%;
+    height: 94px;
+    background-color: #F5F5F5;
+}
+.footer-top-slogen-icon{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+
+}
+.footer-top-slogen-icon1{
+    margin-left: -604px;
+}
+.footer-top-slogen-icon2{
+    margin-left: -302px;
+}
+.footer-top-slogen-icon4{
+    margin-left: 302px;
+}
+.footer-top-shopping dl{
+    float: left;    /*dl是块级元素，要设置浮动，才能横向排列*/
+    width: 200px;
+}
+.footer-top-shopping .last-dl{
+    width: 100px;
+}
+.footer-top-shopping dt,.coverage h3
+{
+    height: 34px;
+    font-size: 14px;
+    font-family: "miscrosoft yahei";
+    line-height: 34px;
+
+}
+.footer-top-shopping dd{
+    line-height: 22px;
+}
+.coverage{
+    height: 169px;
+    width: 186px;
+    float: right;
+    margin-right: 40px;
+    padding-left: 17px;
+    background:url("../images/china.jpg") no-repeat 0 0px;
+}
+
+    .coverage p{
+        padding-top: 8px;
+    }
+    .coverage a{
+
+    }
+
+    .footer-bottom{
+        text-align: center;
+        margin-top: 20px;
+        padding: 20px 0 30px;
+        border-top: 1px solid #E1E1E1;
+    }
+    .footer-bottom-links a{
+        /*margin是外边距，background-color仅作用于a链接*/
+        margin:0 10px;
+        /*padding为内边距，即补白的效果，属于a标签的一部分，所以background-color也会作用其上*/
+        /*padding: 0 10px;*/
+        /*仅为测试margin和padding*/
+        /*background-color: #C81623;*/
+    }
+    .footer-bottom-copyright{
+        margin: 10px 0px;
+    }
+    .footer-bottom-img a{
+        margin: 0 5px;
+    }
+/*单伪元素写法*/
+.clearfix:after{
+    content: '';
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    display: block;
+    clear: both;
+}
+.clearfix{
+    *zoom: 1;/*为IE浏览器6,7,8版本设置*/
+}
+/*双伪元素法*/
+.clearfix:before,.clearfix:after{
+    display: table;
+    content: '';
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix{
+     *zoom: 1;
+}
+
+.shortcut-nav{
+    height: 44px;
+    width: 100%;
+    border-bottom: 2px solid #B1191A;
+}
+.shortcut-nav-menu{
+    width: 190px;
+    height: 44px;
+    float: left;
+    position: relative;
+    z-index: 1;
+    /*background-color: pink;*/
+}
+.shortcut-nav-menu-all a{
+    display: block;
+    /*width: 190px;*/
+    height: 44px;
+    /*margin: 0 10px;*/
+    padding: 0 17px;
+    background-color: #B1191A;
+    color: white;
+    font: 400 15px/44px "miscrosoft yahei";
+
+}
+.shortcut-nav-menu-one{
+    height: 478px;
+    margin-top: 2px;
+    background-color: #C81623;
+    border-left: 1px solid #B1191A;
+    border-bottom: 1px solid #B1191A;
+    display: block;
+}
+.shortcut-nav-menu-one div{
+    height: 26px;
+    padding: 0 17px;
+    /*font-size: 14px;*/
+    /*font-family: "miscrosoft yahei";*/
+    /*line-height: 31px;*/
+
+}
+.shortcut-nav-menu-one :hover{
+    background-color: #fff;
+}
+.shortcut-nav-menu-one :hover a{
+    color: #626262;
+}
+.shortcut-nav-menu-one h3{
+    float: left;
+    font-size: 14px;
+    font-family: "miscrosoft yahei";
+    line-height: 26px;
+}
+.shortcut-nav-menu-one a{
+    float: left;
+    color: #fff;
+
+}
+.shortcut-nav-menu-one i{
+    float: right;
+    color: #fff;
+}
+.shortcut-nav-item{
+    width:730px ;
+    height: 44px;
+    float: left;
+    /*background-color: yellowgreen;*/
+}
+.shortcut-nav-item li{
+    float: left;
+}
+.shortcut-nav-item a{
+    display: inline-block;
+    height: 44px;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 44px;
+    color: #333;
+}
+.shortcut-nav-item a:hover {
+    color: #C81623;
+}
+
+.shortcut-nav-image{
+    width:190px ;
+    height: 40px;
+    margin-right: 50px;
+    margin-top: -10px;
+    float: right;
+    /*background-color: yellowgreen;*/
+}
+
+
+  
+
+
+
+
+
+
+
